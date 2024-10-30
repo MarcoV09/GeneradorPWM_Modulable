@@ -25,16 +25,16 @@ project:
 pinout:
   # Inputs
   ui[0]: "increase_duty"
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
+  ui[1]: "decrease_duty"
+  ui[2]: "divisor[0]"
+  ui[3]: "divisor[1]"
+  ui[4]: "divisor[2]"
+  ui[5]: "divisor[3]"
+  ui[6]: "divisor[4]"
+  ui[7]: "divisor[5]"
 
   # Outputs
-  uo[0]: ""
+  uo[0]: "pwm_out"
   uo[1]: ""
   uo[2]: ""
   uo[3]: ""
