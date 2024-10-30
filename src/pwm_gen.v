@@ -1,6 +1,7 @@
 module tt_um_pwm_gen(
     input clk,
     input rst_n,
+    input ena,
     input increase_duty,
     input decrease_duty,
     input [5:0] divisor,
@@ -12,7 +13,9 @@ module tt_um_pwm_gen(
     wire duty_inc, duty_dec;           // Señales para aumento y disminución de ciclo
     wire slow_clk_enable;              // Reloj lento para debounce
     wire tmp1, tmp2, tmp3, tmp4;
-    wire clk_out; 
+    wire clk_out;
+
+    wire _unused = &{ena, 1'b0};
 
     div_freq DIV_FREQ (clk, divisor, rst_n, clk_out);
     
