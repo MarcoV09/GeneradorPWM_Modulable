@@ -1,4 +1,4 @@
-module pwm_gen(
+module tt_um_pwm_gen(
     input clk,
     input rst,
     input increase_duty,
