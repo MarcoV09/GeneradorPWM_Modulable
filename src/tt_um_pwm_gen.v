@@ -1,6 +1,6 @@
 module tt_um_pwm_gen(
     input clk,
-    input rst,
+    input rst_n,
     input increase_duty,
     input decrease_duty,
     input [5:0] divisor,
@@ -14,11 +14,11 @@ module tt_um_pwm_gen(
     wire tmp1, tmp2, tmp3, tmp4;
     wire clk_out; 
 
-    div_freq DIV_FREQ (clk, divisor, rst, clk_out);
+    div_freq DIV_FREQ (clk, divisor, rst_n, clk_out);
     
     // Generación de la señal de habilitación de reloj lento (debounce)
-    always @(posedge clk_out or posedge rst) begin
-        if (rst)
+    always @(posedge clk_out or posedge rst_n) begin
+        if (rst_n)
             counter_debounce <= 0;
         else if (counter_debounce >= 1)
             counter_debounce <= 0;
@@ -38,8 +38,8 @@ module tt_um_pwm_gen(
     assign duty_dec = tmp3 & (~tmp4) & slow_clk_enable;
     
     // Ajuste del ciclo de trabajo
-    always @(posedge clk_out or posedge rst) begin
-        if (rst)
+    always @(posedge clk_out or posedge rst_n) begin
+        if (rst_n)
             DUTY_CYCLE <= 5;
         else begin
             if (duty_inc && DUTY_CYCLE < 10)
@@ -50,8 +50,8 @@ module tt_um_pwm_gen(
     end
     
     // Generación de la señal PWM de 10MHz
-    always @(posedge clk_out or posedge rst) begin
-        if (rst)
+    always @(posedge clk_out or posedge rst_n) begin
+        if (rst_n)
             counter_PWM <= 0;
         else if (counter_PWM >= 9)
             counter_PWM <= 0;
