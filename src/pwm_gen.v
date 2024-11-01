@@ -1,4 +1,4 @@
-module tt_um_pwm_gen(
+module pwm_gen(
     input clk,
     input rst_n,
     input ena,
