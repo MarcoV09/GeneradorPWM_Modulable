@@ -25,7 +25,7 @@ module tb ();
 
   // Replace tt_um_example with your module name:
   //tt_um_pwm_gen user_project (
-  tt_um_pwm_top tt_um_pwm_top (
+  pwm_top pwm_top (
 
       // Include power ports for the Gate Level test:
 `ifdef GL_TEST
