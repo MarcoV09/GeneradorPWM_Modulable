@@ -35,14 +35,14 @@ pinout:
   ui[7]: "divisor[5]"
 
   # Outputs
-  uo[0]: "pwm_out"
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: ""
-  uo[5]: ""
-  uo[6]: ""
-  uo[7]: ""
+  uo[0]: "pwm_out0"
+  uo[1]: "pwm_out1"
+  uo[2]: "pwm_out2"
+  uo[3]: "pwm_out3"
+  uo[4]: "pwm_out4"
+  uo[5]: "pwm_out5"
+  uo[6]: "pwm_out6"
+  uo[7]: "pwm_out7"
 
   # Bidirectional pins
   uio[0]: ""
