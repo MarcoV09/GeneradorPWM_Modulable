@@ -5,7 +5,14 @@ module pwm_gen(
     input increase_duty,
     input decrease_duty,
     input [5:0] divisor,
-    output pwm_out
+    output pwm_out0,
+    output pwm_out1,
+    output pwm_out2,
+    output pwm_out3,
+    output pwm_out4,
+    output pwm_out5,
+    output pwm_out6,
+    output pwm_out7
     );
     reg [27:0] counter_debounce = 0;  // Contador de rebote
     reg [3:0] counter_PWM = 0;        // Contador para generar la señal PWM
@@ -62,6 +69,12 @@ module pwm_gen(
             counter_PWM <= counter_PWM + 1;
     end
     // PWM en alto mientras el contador esté por debajo del ciclo de trabajo
-    assign pwm_out = (counter_PWM < DUTY_CYCLE);
-
+    assign pwm_out0 = (counter_PWM < DUTY_CYCLE);
+    assign pwm_out1 = pwm_out0;
+    assign pwm_out2 = pwm_out0;
+    assign pwm_out3 = pwm_out0;
+    assign pwm_out4 = pwm_out0;
+    assign pwm_out5 = pwm_out0;
+    assign pwm_out6 = pwm_out0;
+    assign pwm_out7 = pwm_out0;
 endmodule
