@@ -1,5 +1,4 @@
 `default_nettype none
-`include "pwm_gen.v"
 
 module tt_um_pwm_top(
     input  wire [7:0] ui_in,    // Dedicated inputs
