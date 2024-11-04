@@ -10,6 +10,7 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 Overall, the module converts a high-speed clock signal into a PWM signal with adjustable frequency and duty cycle. The user receives a high-frequency clock signal and, through a frequency divider, generates a lower-frequency clock. Then, they control the high duration of the PWM signal using buttons that increase or decrease the duty cycle value.
+
 A 5kHz signal is received; the 6-bit divider only accepts numbers from 2 to 63 (decimal). The possible output frequencies for the PWM range from 2500Hz (5kHz/2) to 79Hz (5kHz/63), which can be used in different electronic components such as RGB LEDs, servomotors, stepper motors, sensors, and other circuits.
 
 ## How to test
