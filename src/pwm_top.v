@@ -1,7 +1,7 @@
 `default_nettype none
 `include "pwm_gen.v"
 
-module tt_um_pwm_gen(
+module tt_um_pwm_top(
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
