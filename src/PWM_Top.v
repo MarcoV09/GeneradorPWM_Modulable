@@ -1,3 +1,4 @@
+`default_nettype none
 `include "pwm_gen.v"
 
 module tt_um_pwm_gen(
@@ -11,6 +12,11 @@ module tt_um_pwm_gen(
     input  wire       rst_n     // reset_n - low to reset
 );
 
+    // All output pins must be assigned. If not used, assign to 0.
+    assign uo_out[7:1] = 0;    // only uo_out[0] is used as output for pwm_out
+    assign uio_out[7:0] = 0;        
+    assign uio_oe[7:0]  = 0;
+    
     //List all unused inputs to prevent warnings
     wire _unused = &{ena, uo_out[7:1], uio_in[7:0], uio_out[7:0], uio_oe[7:0], 1'b0};
 
