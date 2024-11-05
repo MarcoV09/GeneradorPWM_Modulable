@@ -20,6 +20,8 @@ A 5kHz signal is received; the 6-bit divider only accepts numbers from 2 to 63 (
 - Set the frequency divider: Define the frequency divider value to adjust the speed of the clock used. This value controls the PWM signal frequency. A higher divider value will result in a lower PWM frequency, and vice versa.
 - Duty cycle adjustment buttons: When activating the increment button, the duty cycle will increase by 10%. When activating the decrement button, the duty cycle will decrease by 10%.
 
+Recommendation: Use the PWM signal only as a control signal; the power supply for the devices it is applied to should come from an external power source.
+
 ## External hardware
 
 The PWM output should go to a PMOD to have that control signal available on a device.
