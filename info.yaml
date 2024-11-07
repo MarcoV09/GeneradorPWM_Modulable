@@ -3,7 +3,7 @@ project:
   title:        "Generador PWM multiproposito con frecuencia y ciclo de trabajo modulable"      # Project title
   author:       "Marco Vázquez, Paúl González, Abimael Jimenez, UACJ"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "Generador PWM que cuenta con una entrada de 6 bits que permite ingresar un denominador para dividir la frecuencia; esa respuesta modulada incrementa o decrementa un 10% el 'duty cycle' con un par de entradas"      # One line description of what your project does
+  description:  "A PWM generator with a 6-bit input that allows the user to enter a denominator that divides the frequency. Using a pair of control inputs, we can increase or decrease the duty cycle of the modulated output by 10%." # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     5000       # Clock frequency in Hz (or 0 if not applicable)
 
